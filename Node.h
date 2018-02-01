@@ -23,6 +23,25 @@ public:
     void setNodePointer(Node<Type>* nextPointer);
     
     };
+
+
+//Implement
+
+template <class Type>
+Node<Type> :: Node(){
+    nodePointer = nullptr;
+    
+    }
+
+template <class Type>
+Node<Type> :: Node(Type value){
+    this->nodeValue = value;
+    this->nodePointer = nullptr;
+    }
+    
+template <class Type>
+    
+
     
     
     
