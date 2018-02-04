@@ -5,8 +5,9 @@
 
 template <class ListType>
 class LinkedList{
-
-//data attributes
+private:
+//pointer to first node
+//head
 //node
 
 public:
