@@ -15,9 +15,8 @@ struct Node {
 
 class LinkedList{
 private:
-//pointer to first node
-Node <T>* head;
-//count
+Node <T>* head;     //pointer to first node
+int count;          // no of nodes in the list
 
 
 
