@@ -6,7 +6,7 @@
 template <class T>
 struct Node {
   T data;
-  Node <L>* pointer;
+  Node <T>* pointer;
   
 }
 
