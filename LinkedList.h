@@ -3,12 +3,21 @@
 
 
 
-template <class ListType>
+template <class T>
+struct Node {
+  T data;
+  Node <L>* pointer;
+  
+}
+
+
+
+
 class LinkedList{
 private:
 //pointer to first node
-//head
-//node
+//count
+
 
 public:
   //constructor & destructor
@@ -17,11 +26,11 @@ public:
   
   
   //functions
-  Node<ListType>* newlist();        
-  <ListType> addNode();
-  <ListType> deleteNode();
-  <ListType> findNode();
-  <ListType> countItems();
-  <ListType> EmptyList();
+  void newlist(T node);        
+  void addNode(T node);
+  void deleteNode();
+  void findNode();
+  int countItems();
+  bool EmptyList();
   
   
