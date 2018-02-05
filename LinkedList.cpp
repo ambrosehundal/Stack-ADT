@@ -54,8 +54,25 @@ public:
          temp2->pointer=temp1;   
  } ;
   
+       
+         //delete node
+         void deleteNode(int n){
+         Node<T>* temp1 = head;
+         if(n==1){
+         head = temp1->pointer;
+         free(temp1);
+          return;
+         }
+           for(int i=0; i<n-2;i++){
+             temp1=temp1->pointer;
+             Node<T>* temp2 = temp1->pointer;
+             temp1->pointer = temp2->pointer;
+             free(temp2);
+         
+         };
   
- virtual void deleteNode();
+  
+  
  virtual void findNode();
   
   //get the total items in list
