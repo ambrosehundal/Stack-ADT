@@ -28,9 +28,6 @@ public:
   
   
   //functions
- virtual void newlist(T node);  
- 
-  
   
   //add an item to list
  template <class T>
@@ -74,8 +71,20 @@ public:
          };
   
   
-  
- virtual void findNode();
+  template <class T>
+  void LinkedList<T> :: findNode(){
+    struct Node* current = head;
+    int nodecount = 0;
+    
+    while(current!= NULL){
+      if(nodecount == index){
+        return(current->data)
+      }
+      nodecount++;
+      current=current->pointer;
+    }
+  }
+      
   
   //get the total items in list
   template <class T>
@@ -84,8 +93,9 @@ public:
     
   }
       
-    
-  bool EmptyList( Node<T>* c){
+  //clear the list 
+  template <class T>
+  bool LinkedList<T> :: EmptyList(Node<T>* c){
     Node<T>* current = head;
     Node<T>* temp;
     while(temp!=null){
@@ -95,7 +105,11 @@ public:
     }
       
   }
-  bool isEmpty();
+  //check if list is empty
+  template <class T>
+  bool LinkedList<T> :: isEmpty(Node<T>* head){
+    return(head == null);
+  }
   
   
   
