@@ -33,7 +33,8 @@ public:
   
   
   //add an item to list
- void addAnywhere(<T> x, int n){
+ template <class T>
+ void LinkedList<T> :: addAnywhere(<T> data, int n){
       //create new node and initialize
       Node<T>* temp1 = new Node<T>();
       temp1->data=data;
@@ -56,14 +57,15 @@ public:
   
        
          //delete node
-         void deleteNode(int n){
+    template <class T>
+    void LinkedList<T> :: deleteNode(int n){
          Node<T>* temp1 = head;
          if(n==1){
          head = temp1->pointer;
          free(temp1);
           return;
          }
-           for(int i=0; i<n-2;i++){
+         for(int i=0; i<n-2;i++){
              temp1=temp1->pointer;
              Node<T>* temp2 = temp1->pointer;
              temp1->pointer = temp2->pointer;
@@ -82,8 +84,17 @@ public:
     
   }
       
-    ;
-  bool EmptyList();
+    
+  bool EmptyList( Node<T>* c){
+    Node<T>* current = head;
+    Node<T>* temp;
+    while(temp!=null){
+      temp = current;
+      current = current->next;
+      free(temp);
+    }
+      
+  }
   bool isEmpty();
   
   
