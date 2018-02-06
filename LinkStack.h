@@ -4,16 +4,17 @@
 
 
 template < class ItemType > 
-class LinkStack{
+class Stack{
 
 private:
-  Node <Type> *topPtr;	// Pointer to first node in the chain;
+  Node<ItemType>* top;	// Pointer to first node in the chain;
+  int stacksize;
 
 
 public:
 // Constructors and destructor:
-  LinkStack ();	// Default constructor
-  virtual ~ LinkStack ();	// Destructor
+  Stack ();	// Default constructor
+  ~Stack ();	// Destructor
 
 //Stack operations:
   bool isEmpty () const;
