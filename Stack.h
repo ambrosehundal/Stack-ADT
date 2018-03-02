@@ -1,27 +1,99 @@
-#ifndef Stack
-#define Stack
-#include "Node.h"
+#ifndef STACK_H
+#define STACK_H
 
+//include all necessary files
 
-template < class ItemType > 
-class Stack{
+template <class T>
+class Stack : protected LinkedList{
 
 private:
-  Node<ItemType>* top;	// Pointer to first node in the chain;
-  int stacksize;
-
+	int stacksize;
+	Node<T>* top;
 
 public:
-// Constructors and destructor:
-  Stack ();	// Default constructor
-  ~Stack ();	// Destructor
+	Stack();
+	~Stack();
 
-//Stack operations:
-  bool isEmpty () const;
+	bool isEmpty();
+	bool push(T entry);
+	bool pop();
+	int size();
+	void clear();
+	T top;
 
-  bool push ();
+}
 
-  bool pop ();
+//implementation does not go inside class scope, change on other files as well
 
-};  
+
+/******************************************
+* Stack();
+* constructor
+*/
+template <class T>
+Stack<T>::Stack(){
+
+	LinkedList();
+}
+
+
+/******************************************
+* Stack();
+* destructor
+*/
+template <class T>
+Stack<T>::~Stack(){
+
+}
+
+
+/******************************************
+* bool push()
+* pushes an entry onto the stack
+*/
+template <class T>
+bool Stack<T>::push(){
+
+}
+
+
+/******************************************
+* bool pop()
+* pops an entry off the stack
+*/
+template <class T>
+bool Stack<T>::pop(){
+
+}
+
+
+/******************************************
+* bool isEmpty()
+* checks if the stack is empty or not
+*/
+template <class T>
+bool Stack<T>::isEmpty(){
+
+}
+
+
+/******************************************
+* int getsize()
+* returns the number of items on the stack
+*/
+template <class T>
+int Stack<T>::getSize(){
+	return stacksize;
+}
+
+/******************************************
+* void clear()
+* clears the stack
+*/
+template <class T>
+void Stack<T>::clear(){
+
+}
+
+#endif
 
