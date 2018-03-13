@@ -1,0 +1,12 @@
+﻿  StackADT.cpp
+c:\users\ambreezy\source\repos\stackadt\stackadt\stackadt.cpp(10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+c:\users\ambreezy\source\repos\stackadt\stackadt\stack.h(115): warning C4717: 'Stack<int>::clear': recursive on all control paths, function will cause runtime stack overflow
+c:\users\ambreezy\source\repos\stackadt\stackadt\stack.h(115): warning C4717: 'Stack<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >::clear': recursive on all control paths, function will cause runtime stack overflow
+c:\users\ambreezy\source\repos\stackadt\stackadt\stack.h(115): warning C4717: 'Stack<double>::clear': recursive on all control paths, function will cause runtime stack overflow
+StackADT.obj : error LNK2019: unresolved external symbol "void __cdecl doubleStackPush(class Stack<double> *)" (?doubleStackPush@@YAXPAV?$Stack@N@@@Z) referenced in function _main
+StackADT.obj : error LNK2019: unresolved external symbol "void __cdecl doubleStackPop(class Stack<double> *)" (?doubleStackPop@@YAXPAV?$Stack@N@@@Z) referenced in function _main
+StackADT.obj : error LNK2019: unresolved external symbol "void __cdecl doubleStackClear(class Stack<double> *)" (?doubleStackClear@@YAXPAV?$Stack@N@@@Z) referenced in function _main
+StackADT.obj : error LNK2019: unresolved external symbol "void __cdecl stringStackPush(class Stack<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > *)" (?stringStackPush@@YAXPAV?$Stack@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@@@Z) referenced in function _main
+StackADT.obj : error LNK2019: unresolved external symbol "void __cdecl stringStackPop(class Stack<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > *)" (?stringStackPop@@YAXPAV?$Stack@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@@@Z) referenced in function _main
+StackADT.obj : error LNK2019: unresolved external symbol "void __cdecl stringStackClear(class Stack<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > *)" (?stringStackClear@@YAXPAV?$Stack@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@@@Z) referenced in function _main
+C:\Users\Ambreezy\source\repos\StackADT\Debug\StackADT.exe : fatal error LNK1120: 6 unresolved externals
