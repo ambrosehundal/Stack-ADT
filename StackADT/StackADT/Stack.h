@@ -3,27 +3,34 @@
 #define STACK_H
 #include "LinkedList.h"
 
+/*
+ UML
+ +push(entry : T) : bool
+ +pop() : bool
+ +isEmpty() : bool
+
+
+
+*/
+
+using namespace std;
+
 
 template <class T>
-class Stack : protected LinkedList<T> {
-
-private:
-	Node<T>* top;
+class Stack : public LinkedList<T> {
 
 public:
 	Stack();
 	~Stack();
 
-	bool isEmpty();
+	
 	bool push(T entry);
 	bool pop();
-	//int getSize();
-	void clear();
-	
+	bool isEmpty();
+
+
 
 };
-
-//implementation does not go inside class scope, change on other files as well
 
 
 /******************************************
@@ -43,7 +50,7 @@ Stack<T>::Stack() {
 */
 template <class T>
 Stack<T>::~Stack() {
-	clear();
+	LinkedList<T>::clear();
 }
 
 
@@ -53,15 +60,8 @@ Stack<T>::~Stack() {
 */
 template <class T>
 bool Stack<T>::push(T entry) {
- 	int len = this->getSize();
-	try {
-		this->insertNode(entry, len - 1);
-		return true;
-	}
-	catch (...) {
-		cout << "Could not push ..." << endl;
-		return false;
-	}
+	return LinkedList<T>::pushNode(entry);
+	
 }
 
 
@@ -71,15 +71,8 @@ bool Stack<T>::push(T entry) {
 */
 template <class T>
 bool Stack<T>::pop() {
-	try {
-		 this->deleteNode(this->getSize() - 1);
-		return true;
-	}
-	catch(...){
-		cout << "Could not pop from stack ..." << endl;
-		return false;
 
-	}
+	return LinkedList<T>::deleteNode(1);
 	
 }
 
@@ -91,27 +84,6 @@ bool Stack<T>::pop() {
 template <class T>
 bool Stack<T>::isEmpty() {
 	return LinkedList<T>::isEmpty();
-}
-
-
-/******************************************
-* int getsize()
-* returns the number of items on the stack
-*/
-/*template <class T>
-int Stack<T>::getSize() {
-	return stacksize;
-}
-*/
-
-
-/******************************************
-* void clear()
-* clears the stack
-*/
-template <class T>
-void Stack<T>::clear() {
-	this->clear();
 }
 
 #endif
